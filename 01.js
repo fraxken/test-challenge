@@ -34,7 +34,14 @@ function calc_moy(nums = []) {
     return nums.reduce((acc, curr) => curr + acc, 0);
 }
 
+const STATE = Object.freeze({
+    run: 0,
+    walk: 1,
+    idle: 2
+});
+
 module.exports = {
     add,
-    calc_moy
+    calc_moy,
+    STATE
 };

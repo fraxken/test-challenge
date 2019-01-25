@@ -16,11 +16,13 @@ class Vector {
     }
 
     add(vec) {
+        if (!(vec instanceof Vector)) {
+            throw new TypeError("vec must be an instanceof Vector");
+        }
 
-    }
-
-    distanceTo(vec) {
-
+        this.x += vec.x;
+        this.y += vec.y;
+        this.z += vec.z;
     }
 }
 
