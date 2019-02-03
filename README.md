@@ -2,7 +2,7 @@
 Apprendre à écrire des tests sur Node.js (et indirectement Javascript)
 
 # Introduction
-Ce challenge (exercice) a pour objectif l'écriture de tests à partir d'un code que nous vous donnons. Réaliser plusieurs fichiers de tests du même nom (`01.js`, `02.js` etc..) dans le dossier racine **test.
+Ce challenge (exercice) a pour objectif l'écriture de tests à partir d'un code que nous vous donnons. Réaliser plusieurs fichiers de tests du même nom (`01.js`, `02.js` etc..) dans le dossier racine **test**.
 
 Vous êtes libre de choisir la librairie qui vous convient le mieux, néanmoins voici **des recommandations**:
 - [Ava](https://github.com/avajs/ava)
