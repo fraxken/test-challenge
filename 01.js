@@ -11,7 +11,7 @@ function add(a, b = 10) {
     if (typeof a !== "number") {
         throw new TypeError("a must be a number");
     }
-    if (typeof a !== "number") {
+    if (typeof b !== "number") {
         throw new TypeError("b must be a number");
     }
 
