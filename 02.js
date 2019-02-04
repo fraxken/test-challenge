@@ -24,6 +24,10 @@ class Vector {
         this.y += vec.y;
         this.z += vec.z;
     }
+
+    toJSON() {
+        return { x: this.x, y: this.y, z: this.z };
+    }
 }
 
 module.exports = Vector;
