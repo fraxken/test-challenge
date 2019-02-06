@@ -31,7 +31,7 @@ function calc_moy(nums = []) {
         throw new TypeError("nums must be an array!");
     }
 
-    return nums.reduce((acc, curr) => curr + acc, 0);
+    return nums.reduce((acc, curr) => curr + acc, 0) / nums.length;
 }
 
 const STATE = Object.freeze({
