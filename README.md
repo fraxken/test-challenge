@@ -1,5 +1,5 @@
 # test-challenge
-Apprendre à écrire des tests sur Node.js (et indirectement Javascript)
+Apprendre à écrire des tests sur Node.js (et indirectement Javascript). Cet exercice est recommandé pour les développeurs possédant un niveau `intermediaire`.
 
 # Introduction
 Ce challenge (exercice) a pour objectif l'écriture de tests à partir d'un code que nous vous donnons. Réaliser plusieurs fichiers de tests du même nom (`01.js`, `02.js` etc..) dans le dossier racine **test**.
@@ -11,7 +11,7 @@ Vous êtes libre de choisir la librairie qui vous convient le mieux, néanmoins 
 - [Japa](https://github.com/thetutlage/japa)
 - [Jest](https://jestjs.io/)
 
-Pour le coverage:
+Pour le coverage (couverture des tests):
 - [nyc](https://github.com/istanbuljs/nyc#readme) (istanbul)
 - [NODE_COVERAGE](https://nodejs.org/dist/latest-v11.x/docs/api/cli.html#cli_node_v8_coverage_dir) avec [c8](https://github.com/bcoe/c8#readme)
 
