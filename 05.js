@@ -11,7 +11,6 @@ class Server extends EventEmitter {
             writable: true,
             value: false
         });
-        this[SimReady] = false;
 
         setTimeout(() => {
             this.emit("ready");
