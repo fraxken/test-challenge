@@ -17,7 +17,7 @@ const availableActions = new Set(Object.keys(cases));
  */
 function calc(actionName, ...args) {
     if (!availableActions.has(actionName)) {
-        throw new Error(`Unknow action '${actionName}'`);
+        throw new Error(`Unknown action '${actionName}'`);
     }
 
     const [a = 0, b = 0] = args;
