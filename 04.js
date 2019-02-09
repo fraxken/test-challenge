@@ -21,7 +21,7 @@ function calc(actionName, ...args) {
     }
 
     const [a = 0, b = 0] = args;
-    return cases[actionName](a, b);
+    return cases[actionName](Number(a), Number(b));
 }
 
 module.exports = calc;
