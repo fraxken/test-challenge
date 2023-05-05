@@ -1,5 +1,5 @@
 # test-challenge
-Apprendre à écrire des [tests unitaire](https://fr.wikipedia.org/wiki/Test_unitaire#:~:text=En%20programmation%20informatique%2C%20le%20test,%C2%BB%20ou%20%C2%AB%20module%20%C2%BB).) sur [Node.js](https://nodejs.org/en/) (et indirectement vous améliorer en JavaScript). Cet exercice vous nécessitera de la perseverance et de l'autonomie!
+Apprendre à écrire des [tests unitaire](https://fr.wikipedia.org/wiki/Test_unitaire#:~:text=En%20programmation%20informatique%2C%20le%20test,%C2%BB%20ou%20%C2%AB%20module%20%C2%BB) sur [Node.js](https://nodejs.org/en/) (et indirectement vous améliorer en JavaScript). Cet exercice vous nécessitera de la perseverance et de l'autonomie!
 
 # Pourquoi ?
 
@@ -13,15 +13,13 @@ Ce challenge (exercice) a pour objectif l'écriture de tests à partir d'un code
 > Attention **il est interdit de modifier le code fournit**.
 
 Vous êtes libre de choisir la librairie qui vous convient le mieux, néanmoins voici **des recommandations**:
-- [Ava](https://github.com/avajs/ava)
-- [Japa](https://github.com/thetutlage/japa)
+- [Node.js test_runner](https://nodejs.org/api/test.html)
 - [Jest](https://jestjs.io/)
 
 Pour le coverage (couverture des tests):
-- [nyc](https://github.com/istanbuljs/nyc#readme) (istanbul)
 - [NODE_COVERAGE](https://nodejs.org/dist/latest-v11.x/docs/api/cli.html#cli_node_v8_coverage_dir) avec [c8](https://github.com/bcoe/c8#readme)
 
-> La gestion du coverage est déjà inclus sur Jest.
+> **note** La gestion du coverage est déjà inclus sur Jest.
 
 # Comment savoir si le test est bon ?
 La **règle d'or de cet exercice** est que si le code source est modifié et que votre test n'arrive pas à le détecter, c'est que **vous avez échoué**.

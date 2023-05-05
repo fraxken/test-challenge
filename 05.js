@@ -1,35 +1,35 @@
-const EventEmitter = require("events");
+import EventEmitter from "node:events";
 
-const SimReady = Symbol("ready");
+// CONSTANTS
+const kReadySymbol = Symbol("ready");
 
-class Server extends EventEmitter {
-    constructor() {
-        super();
-        Reflect.defineProperty(this, SimReady, {
-            enumerable: false,
-            configurable: false,
-            writable: true,
-            value: false
-        });
+export default class Server extends EventEmitter {
+  static OHNO = true;
 
-        setTimeout(() => {
-            this.emit("ready");
-            this[SimReady] = true;
-        }, 500);
+  constructor() {
+    super();
+    Object.defineProperty(this, kReadySymbol, {
+      enumerable: false,
+      configurable: false,
+      writable: true,
+      value: false
+    });
+
+    setTimeout(() => {
+      this.emit("ready");
+      this[kReadySymbol] = true;
+    }, 500);
+  }
+
+  get isReady() {
+    return this[kReadySymbol];
+  }
+
+  callMeMaybe() {
+    if (!this.isReady) {
+      throw new Error("Server must be ready!");
     }
 
-    get isReady() {
-        return this[SimReady];
-    }
-
-    callMeMaybe() {
-        if (!this.isReady) {
-            throw new Error("Server must be ready!");
-        }
-
-        process.stdout.write(Server.OHNO ? "WELL DONE!" : "FOO BAR!");
-    }
+    process.stdout.write(Server.OHNO ? "WELL DONE!" : "FOO BAR!");
+  }
 }
-Server.OHNO = true;
-
-module.exports = Server;
