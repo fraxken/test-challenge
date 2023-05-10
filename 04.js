@@ -1,26 +1,26 @@
-const cases = {
-  add: (a, b) => a + b,
-  mul: (a, b) => a * b,
-  sub: (a, b) => a - b
-};
+export const OPERATIONS = Object.freeze({
+  add: (left, right) => left + right,
+  mul: (left, right) => left * right,
+  sub: (left, right) => left - right
+});
 
 /** @type {Set<String>} */
-const kAvailableActions = new Set(Object.keys(cases));
+const kAvailableOperations = new Set(Object.keys(OPERATIONS));
 
 /**
  * @func calc
- * @param {!String} actionName actionName
+ * @param {!String} operationName operationName
  * @param  {...any} args args
  * @returns {Number}
  *
  * @throws {Error}
  */
-export function calc(actionName, ...args) {
-  if (!kAvailableActions.has(actionName)) {
-    throw new Error(`Unknown action '${actionName}'`);
+export function calc(operationName, ...args) {
+  if (!kAvailableOperations.has(operationName)) {
+    throw new Error(`Unknown operation '${operationName}'`);
   }
 
   const [a = 0, b = 0] = args;
 
-  return cases[actionName](Number(a), Number(b));
+  return OPERATIONS[operationName](Number(a), Number(b));
 }

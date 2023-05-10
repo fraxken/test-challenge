@@ -15,10 +15,10 @@ export default class Server extends EventEmitter {
       value: false
     });
 
-    setTimeout(() => {
+    setImmediate(() => {
       this.emit("ready");
       this[kReadySymbol] = true;
-    }, 500);
+    });
   }
 
   get isReady() {
